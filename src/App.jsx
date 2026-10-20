@@ -5,8 +5,8 @@ import { useState } from 'react'
 function App() {
 
   return (
-    <div>
-      
+    <div className='bg-stone-900 min-h-screen'>
+
     </div>
   )
 }
