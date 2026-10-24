@@ -6,19 +6,21 @@ import Navbar from './layout/Navbar/Navbar.jsx';
 import Footer from './layout/Footer.jsx';
 import Home from './pages/Home/Home.jsx';
 import Bressani from './pages/Bressani/Bressani.jsx';
-import AllWorks from './pages/AllWorks/AllWorks.jsx';
+import Books from './pages/Books/Books.jsx';
+import AboutMe from './pages/AboutMe/AboutMe.jsx';
 
 function App() {
 
   return (
     <BrowserRouter>
-      <div className='min-h-screen bg-stone-800 grid grid-rows-[auto_1fr_auto]'>
+      <div className='min-h-screen bg-neutral-900 grid grid-rows-[auto_1fr_auto]'>
         <Navbar/>
         <Routes>
           <Route path='/'>
             <Route index element={<Home />}/>
             <Route path='/bressani' element={<Bressani/>}/>
-            <Route path='/all-works' element={<AllWorks/>}/>         
+            <Route path='/books' element={<Books/>}/>
+            <Route path='/author' element={<AboutMe/>}/>         
           </Route>
         </Routes>
         <Footer />

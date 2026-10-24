@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/inter";
+
 
 @custom-variant dark (&:is(.dark *));
 
@@ -9,8 +12,10 @@
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
+  --body-text: Roboto, 'Open Sans', 'Lora', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --elegant: 'Lora', Roboto, 'Open Sans', system-ui, 'Segoe UI', Roboto, sans-serif;
 
-  font-family: var(--sans);
+  font-family: var(--body-text);
   color-scheme: light dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -54,6 +59,10 @@
 :root {
   button {
     cursor: pointer;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: var(--elegant);
   }
 }
 
