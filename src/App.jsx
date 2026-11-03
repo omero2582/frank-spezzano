@@ -13,7 +13,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className='min-h-screen bg-neutral-950 grid grid-rows-[auto_1fr_auto]'>
+      <div className='min-h-screen bg-neutral-900 grid grid-rows-[auto_1fr_auto]'>
         <Navbar/>
         <Routes>
           <Route path='/'>

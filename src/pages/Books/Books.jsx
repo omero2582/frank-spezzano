@@ -1,6 +1,7 @@
 import React from 'react'
 import Bressani from '../Bressani/Bressani'
 import books from '../../db/books.json'
+import { Link } from 'react-router'
 
 export default function Books() {
   return (
@@ -9,9 +10,9 @@ export default function Books() {
         Books
       </h1>
       
-      <div className='bg-red-700 grid space-y-2 px-2 py-2'>
+      <div className='bg-red-700 grid space-y-2 px-2 py-2 cursor-pointer'>
         {books.map(book => (
-          <div className='bg-stone-50 grid grid-flow-col grid-cols-[auto_1fr] px-4 py-3 rounded-md'>
+          <Link to={`/books/${book.slug}`} className='bg-stone-50 grid grid-flow-col grid-cols-[auto_1fr] px-4 py-3 rounded-md'>
             <div>
               <img className='h-[300px]' src={`${book.covers[0]}`}/>
             </div>
@@ -23,7 +24,7 @@ export default function Books() {
                 {book.descripion}
               </p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
