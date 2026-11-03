@@ -18,9 +18,11 @@ function App() {
         <Routes>
           <Route path='/'>
             <Route index element={<Home />}/>
-            <Route path='/bressani' element={<Bressani/>}/>
-            <Route path='/books' element={<Books/>}/>
             <Route path='/author' element={<AboutMe/>}/>         
+            <Route path='/books'>
+              <Route index element={<Books />}/>
+              <Route path='/books/bressani' element={<Bressani/>}/>
+            </Route>
           </Route>
         </Routes>
         <Footer />

@@ -5,7 +5,7 @@ export default function AboutMe() {
   return (
     <div className='text-neutral-300 mb-20'>
       <Hero />
-      <div className='grid max-w-[1200px] mx-auto'>
+      <div className='grid max-w-[1200px] mx-auto px-8'>
         <h1 className='text-[3.2rem] text-stone-100 font-[700] mx-auto mt-30 mb-12'>
           About Frank Spezzano
         </h1>
