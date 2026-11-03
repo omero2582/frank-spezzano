@@ -59,14 +59,16 @@ export default function Bressani() {
               <p>
                 Accomplishments: Fr. Bressani is the author of an important map entitled Novae Franciae Accurata Delineatio which is the earliest representation of the native life in New France in existence.
               </p>
-
               <p>
                 Bressani was an astonishing man, even for a missionary. He sailed for the new world in 1642. Though only twenty-nine, he had already attained distinction as a professor of literature, philosophy and mathematics. His scientific interests were continually evident.
               </p>
-
               <p>
                 He made astronomical observations at Ste. Marie among the Hurons with a telescope. When he reached the Huron country in the fall of 1645, he was able to put his astronomical training to excellent use. On a cold winter night Bressani held a telescope in his mutilated hands and observed a lunar eclipse with an accuracy unmatched in North America for the rest of the century and equaled at the time only by European astronomers.
               </p>
+
+              <button className='font-[500] bg-rose-700 hover:bg-rose-600 px-6 py-2 rounded-2xl'>
+                Buy Now
+              </button>
             </div>
           </div>
 
