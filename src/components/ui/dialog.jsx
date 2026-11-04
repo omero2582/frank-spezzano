@@ -66,11 +66,15 @@ function DialogContent({
         {showCloseButton && (
           <DialogPrimitive.Close
             data-slot="dialog-close"
+            className=''
             render={
-              <Button
-                variant="ghost"
-                className="absolute top-4 right-4"
-                size="icon-sm"
+              // <Button
+              //   variant="ghost"
+              //   className="absolute top-4 right-4"
+              //   size="icon-sm"
+              // />
+              <button
+                className="absolute top-4 right-4 bg-neutral-50 hover:bg-neutral-200 px-1 py-1 rounded-full"
               />
             }
           >

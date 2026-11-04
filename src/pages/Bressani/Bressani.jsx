@@ -111,7 +111,9 @@ export default function Bressani() {
               </section>
             )}
           </div>
-          <DialogContent className="grid-rows-[minmax(0,1fr)] p-2 h-dvh max-w-[800px]! bg-neutral-900">
+          <DialogContent 
+            className="grid-rows-[minmax(0,1fr)] p-2 h-dvh max-w-[800px]! bg-neutral-900"
+          >
             {selectedImage && (
               <img
                 src={selectedImage}
