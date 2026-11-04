@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Hero from '../Home/Hero'
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 
 const symbolsOfFaith = [
   {src: '/books/Bressani/symbol-of-faith1.jpg'},
@@ -31,9 +32,16 @@ const sections = [
 
 export default function Bressani() {
 
-
+  const [selectedImage, setSelectedImage] = useState(null)
 
   return (
+        <Dialog
+            open={selectedImage !== null}
+            onOpenChange={(open) => {
+              if (!open) setSelectedImage(null)
+            }}
+          className=""
+          >
       <div className='text-neutral-300 mb-20'>
         <Hero />
         <div className='grid max-w-[1200px] mx-auto px-8'>
@@ -73,26 +81,47 @@ export default function Bressani() {
           </div>
 
           {/*Images Sections*/}
+          
           <div className='mt-35 space-y-25'>
             {sections.map(section=>
               <section>
                 <h2 className='text-[3rem] text-stone-200 font-[700] text-center mb-8'>
                   {section.label}
                 </h2>
-                <div className='flex flex-wrap gap-2 justify-center'>
-                  {
-                  section.images.map(b =>
-                    <img
-                      src={b.src}
-                      className="rounded-sm h-[300px] w-auto object-cover"
-                      loading='lazy'
-                    />
-                  )
-                  }
-                </div>
+                
+                  <div className='flex flex-wrap gap-2 justify-center'>
+                    {
+                    section.images.map(b =>
+                      <button
+                        type="button"
+                        key={b.src}
+                        onClick={() => setSelectedImage(b.src)}
+                        className="cursor-pointer"
+                      >
+                        <img
+                          src={b.src}
+                          className="rounded-sm h-[300px] w-auto object-cover"
+                          loading='lazy'
+                          
+                        />
+                      </button>
+                    )
+                    }
+                  </div>
               </section>
             )}
           </div>
+          <DialogContent className="grid-rows-[minmax(0,1fr)] p-2 h-dvh max-w-[800px]! bg-neutral-900">
+            {selectedImage && (
+              <img
+                src={selectedImage}
+                className="rounded-sm max-h-[100%]! place-self-center"
+                alt=""
+              />
+            )}
+          </DialogContent>
+          
+
 
 
           <div className='mt-35'>
@@ -172,8 +201,8 @@ export default function Bressani() {
               </p>
             </div>
           </div>
-
         </div>
       </div>
+        </Dialog>
     )
 }
