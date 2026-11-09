@@ -62,7 +62,17 @@
     "price": 2000,
     "covers": ["/books/Paulus/paulus-cover.jpg"],
     "group": ["Promoting the Faith"],
-    "slug": "paulus"
+    "slug": "paulus",
+    "sections": [
+      {
+        "label": "In the News",
+        "type": "images",
+        "images": [
+          {"src": "/books/Paulus/Corriere-Canadese-Paulus-Document_2023-05-12_084821-scaled.jpg"},
+          {"src": "/books/Paulus/Paulus_Radio-Maria.jpg"}
+        ]
+      }
+    ]
   },
   {
     "title": "Caught Between Swastika, Hammer & Sickle",

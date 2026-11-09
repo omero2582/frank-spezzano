@@ -18,7 +18,7 @@ export default function Hero() {
           </div>
           <Link
             to={'/books'}
-            className='px-4 py-4 text-[1.1rem] font-[700] rounded-md bg-rose-700 hover:bg-rose-800 justify-self-center'
+            className='text-neutral-300 px-4 py-4 text-[1.1rem] font-[700] rounded-md bg-rose-700 hover:bg-rose-800 justify-self-center'
           >
             View all Works
           </Link>

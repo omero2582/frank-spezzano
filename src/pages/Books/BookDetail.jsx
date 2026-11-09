@@ -30,14 +30,25 @@ export default function BookDetail() {
   const slug = useParams().slug;
 
   const book = books.find(b => b.slug === slug)
-  const sections = book.sections
+  
+  const [selectedImage, setSelectedImage] = useState(null)
+
+  if(!book) return(
+    <>
+      <Hero />
+      <div className='grid max-w-[1200px] mx-auto px-8'>
+        <h1 className='text-center text-[3.2rem] text-stone-200 font-[700] mx-auto mt-30 mb-12'>
+          Book not found
+        </h1>
+      </div>
+    </>
+  )
 
   // 2. Construct the matching key for the file
   const filePath = `../../db/descriptions/${book.descriptionFile}`;
   //console.log('FilePATH = ', filePath);
   const descriptionMd = descriptionFiles[filePath] || "Description not found.";
 
-  const [selectedImage, setSelectedImage] = useState(null)
 
   return (
     <Dialog
@@ -83,7 +94,7 @@ export default function BookDetail() {
           {/*Sections*/}
           
           <div className='mt-35 space-y-25'>
-            {sections?.map(section => {
+            {book.sections?.map(section => {
                // 2. Construct the matching key for the file
               const filePath = `../../db/content/${section.contentFile}`;
               //console.log('FilePATH = ', filePath);
@@ -137,7 +148,7 @@ export default function BookDetail() {
             )}
           </div>
           <DialogContent 
-            className="grid-rows-[minmax(0,1fr)] p-2 h-dvh max-w-[800px]! bg-neutral-900"
+            className="grid-rows-[minmax(0,1fr)] p-2 h-dvh max-w-[1100px]! bg-neutral-900"
           >
             {selectedImage && (
               <img
