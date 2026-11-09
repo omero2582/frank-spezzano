@@ -1,6 +1,7 @@
 [
   {
     "title": "Bressani: The First Italian Jesuit in North America",
+    "pageTitle": "About Bressani",
     "author": "Frank Spezzano",
     "descriptionFile": "bressani.md",
     "summaryFile": "bressani.md",
@@ -54,6 +55,7 @@
   },
   {
     "title": "Paulus: A Historical Drama in Three Acts",
+    "pageTitle": "Paulus",
     "author": "Frank Spezzano",
     "descriptionFile": "paulus.md",
     "summaryFile": "paulus.md",
@@ -64,6 +66,7 @@
   },
   {
     "title": "Caught Between Swastika, Hammer & Sickle",
+    "pageTitle": "Caught Between Swastika, Hammer & Sickle",
     "author": "Frank Spezzano",
     "descriptionFile": "caught.md",
     "summaryFile": "caught.md",
@@ -72,7 +75,8 @@
     "slug": "caught-between"
   },
   {
-    "title": "Desires....of Love: A Historical Drama of a Nazi Dissident",
+    "title": "Desires...of Love: A Historical Drama of a Nazi Dissident",
+    "pageTitle": "Desires...of Love",
     "author": "Frank Spezzano",
     "descriptionFile": "desires.md",
     "summaryFile": "desires.md",
@@ -82,6 +86,7 @@
   },
   {
     "title": "Ivan Kocsis: Life of an Artist in Retrospect",
+    "pageTitle": "Ivan Kocsis",
     "author": "Frank Spezzano",
     "descriptionFile": "ivan.md",
     "summaryFile": "ivan.md",
@@ -91,6 +96,7 @@
   },
   {
     "title": "The Aviators",
+    "pageTitle": "The Aviators",
     "author": "Frank Spezzano",
     "descriptionFile": "aviators.md",
     "summaryFile": "aviators.md",

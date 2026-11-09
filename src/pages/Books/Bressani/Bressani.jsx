@@ -2,20 +2,32 @@ import React, { useState } from 'react'
 import Hero from '../../Home/Hero'
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 import ReactMarkdown from 'react-markdown';
-import descriptionMd from '../../../db/descriptions/bressani.md?raw'
+// import descriptionMd from '../../../db/descriptions/bressani.md?raw'
 import books from '../../../db/books.json'
 
 
 const book = books.find(b => b.slug === "bressani")
 const sections = book.sections
 
+// 1. Tell Vite to load all .md files in the descriptions folder as raw text strings
+const descriptionFiles = import.meta.glob('../../../db/descriptions/*.md', { 
+  query: '?raw', 
+  import: 'default',
+  eager: true // Loads them synchronously so they are ready immediately
+});
 
-  // 1. Tell Vite to load all .md files in the descriptions folder as raw text strings
-  const contentFiles = import.meta.glob('../../../db/content/*.md', { 
-    query: '?raw', 
-    import: 'default',
-    eager: true // Loads them synchronously so they are ready immediately
-  });
+// 2. Construct the matching key for the file
+const filePath = `../../../db/descriptions/${book.descriptionFile}`;
+//console.log('FilePATH = ', filePath);
+const descriptionMd = descriptionFiles[filePath] || "Description not found.";
+
+
+// 1. Tell Vite to load all .md files in the descriptions folder as raw text strings
+const contentFiles = import.meta.glob('../../../db/content/*.md', { 
+  query: '?raw', 
+  import: 'default',
+  eager: true // Loads them synchronously so they are ready immediately
+});
 
 export default function Bressani() {
 
@@ -32,8 +44,8 @@ export default function Bressani() {
       <div className='text-neutral-300 mb-20'>
         <Hero />
         <div className='grid max-w-[1200px] mx-auto px-8'>
-          <h1 className='text-[3.2rem] text-stone-200 font-[700] mx-auto mt-30 mb-12'>
-            About Bressani
+          <h1 className='text-center text-[3.2rem] text-stone-200 font-[700] mx-auto mt-30 mb-12'>
+            {book.pageTitle}
           </h1>
 
 

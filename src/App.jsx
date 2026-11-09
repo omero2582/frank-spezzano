@@ -9,6 +9,7 @@ import Bressani from './pages/Books/Bressani/Bressani.jsx';
 import Books from './pages/Books/Books.jsx';
 import AboutMe from './pages/AboutMe/AboutMe.jsx';
 import Paulus from './pages/Books/Paulus/Paulus.jsx';
+import BookDetail from './pages/Books/BookDetail.jsx';
 
 function App() {
 
@@ -22,8 +23,9 @@ function App() {
             <Route path='/author' element={<AboutMe/>}/>         
             <Route path='/books'>
               <Route index element={<Books />}/>
-              <Route path='/books/bressani' element={<Bressani/>}/>
-              <Route path='/books/paulus' element={<Paulus/>}/>
+              {/* <Route path='/books/bressani' element={<Bressani/>}/>
+              <Route path='/books/paulus' element={<Paulus/>}/> */}
+              <Route path='/books/:slug' element={<BookDetail/>}/>
             </Route>
           </Route>
         </Routes>
