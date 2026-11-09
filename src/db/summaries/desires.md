@@ -1,0 +1,1 @@
+The story of a Nazi dissident who favours love instead of war.

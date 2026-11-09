@@ -7,14 +7,14 @@ import { Link } from 'react-router'
 export default function Books() {
   
   // 1. Tell Vite to load all .md files in the descriptions folder as raw text strings
-  const descriptionFiles = import.meta.glob('../../db/descriptions/*.md', { 
+  const summaryFiles = import.meta.glob('../../db/summaries/*.md', { 
     query: '?raw', 
     import: 'default',
     eager: true // Loads them synchronously so they are ready immediately
   });
 
   //bg-stone-50
-  // console.log('keys', Object.keys(descriptionFiles))
+  // console.log('keys', Object.keys(summaryFiles))
   return (
     <div className='text-stone-300 bg-neutral-950 '>
       <h1 className='text-stone-200 mt-8 mb-1 text-[3.2rem] text-center font-[700] tracking-[0.025rem]'>
@@ -24,9 +24,9 @@ export default function Books() {
       <div className='grid space-y-2 px-2 py-2 cursor-pointer'>
         {books.map(book => {
           // 2. Construct the matching key for the file
-          const filePath = `../../db/descriptions/${book.descriptionFile}`;
+          const filePath = `../../db/summaries/${book.summaryFile}`;
           //console.log('FilePATH = ', filePath);
-          const markdownContent = descriptionFiles[filePath] || "Description not found.";
+          const markdownContent = summaryFiles[filePath] || "Description not found.";
 
           return (
             <Link 

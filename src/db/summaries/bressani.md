@@ -1,0 +1,3 @@
+"When I returned to France and Italy, I realized that I could not leave my work..."
+
+Father Bressani was a remarkable man from any viewpoint. A man of intellect and scientific curiosity, he was also a unwavering missionary, deeply connected to his faith and dedicated to his evangelical work in New France. He survived torture and mutilation only to insist upon returning to the mission in Canada to continue his work. His admiration and affection for the indigenous people had never diminished: his devotion to God had not dimmed. Father Bressani's courage and faith shine like beacons accross the centuries. This play drew inspiration from Father Bressani's own words.

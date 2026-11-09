@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Hero from '../../Home/Hero'
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 import ReactMarkdown from 'react-markdown';
-import markdownContent from '../../../db/descriptions/paulus.md?raw'
+import descriptionMd from '../../../db/descriptions/paulus.md?raw'
 
 export default function Paulus() {
 
@@ -33,7 +33,7 @@ export default function Paulus() {
                   br: () => <br className="block my-2" />, // Add spacing for line breaks
                 }}
               >
-                {markdownContent}
+                {descriptionMd}
               </ReactMarkdown>
               <button className='font-[500] bg-rose-700 hover:bg-rose-600 px-6 py-2 rounded-2xl'>
                 Buy Now
