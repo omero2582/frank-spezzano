@@ -48,7 +48,7 @@
     "descripion": "The story of a Nazi dissident who favours love instead of war.",
     "descriptionFile": "ivan.md",
     "price": 2000,
-    "covers": ["/books/Ivan/ivan-cover.png"],
+    "covers": ["/books/Ivan/ivan-cover.webp"],
     "slug": "ivan-kocsis"
   },
   {

@@ -1,33 +1,37 @@
 import React, { useState } from 'react'
-import Hero from '../Home/Hero'
+import Hero from '../../Home/Hero'
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 
-const symbolsOfFaith = [
-  {src: '/books/Bressani/symbol-of-faith1.jpg'},
-  {src: '/books/Bressani/symbol-of-faith2.jpg'},
-  {src: '/books/Bressani/symbol-of-faith3.jpg'},
-  {src: '/books/Bressani/symbol-of-faith4.jpg'},
-  {src: '/books/Bressani/symbol-of-faith5.jpg'},
-  {src: '/books/Bressani/symbol-of-faith6-hands.jpg'},
-  {src: '/books/Bressani/symbol-of-faith7-pope.jpg'},
-  {src: '/books/Bressani/symbol-of-faith8-kateri.jpg'},
-]
-
-const historicalDocuments = [
-  {src: '/books/Bressani/historical-docs-early-map.jpg'},
-  {src: '/books/Bressani/historical-docs-letter.jpg'},
-]
-
-const production2008 = [
-  {src: '/books/Bressani/bressani-2008-166-production.jpg'},
-  {src: '/books/Bressani/new-bressani-poster-production-scaled.jpg'},
-  {src: '/books/Bressani/bressani-2008-048-production.jpg'},
-]
 
 const sections = [
-  {label: 'Symbols of Faith', images: symbolsOfFaith},
-  {label: 'Historical Documents', images: historicalDocuments},
-  {label: '2008 Production', images: production2008}
+  {
+    label: 'Symbols of Faith',
+    images: [
+      {src: '/books/Bressani/symbol-of-faith1.jpg'},
+      {src: '/books/Bressani/symbol-of-faith2.jpg'},
+      {src: '/books/Bressani/symbol-of-faith3.jpg'},
+      {src: '/books/Bressani/symbol-of-faith4.jpg'},
+      {src: '/books/Bressani/symbol-of-faith5.jpg'},
+      {src: '/books/Bressani/symbol-of-faith6-hands.jpg'},
+      {src: '/books/Bressani/symbol-of-faith7-pope.jpg'},
+      {src: '/books/Bressani/symbol-of-faith8-kateri.jpg'},
+    ]
+  },
+  {
+    label: 'Historical Documents',
+    images: [
+      {src: '/books/Bressani/historical-docs-early-map.jpg'},
+      {src: '/books/Bressani/historical-docs-letter.jpg'},
+    ]
+  },
+  {
+    label: '2008 Production',
+    images: [
+      {src: '/books/Bressani/bressani-2008-166-production.jpg'},
+      {src: '/books/Bressani/new-bressani-poster-production-scaled.jpg'},
+      {src: '/books/Bressani/bressani-2008-048-production.jpg'},
+    ]
+  }
 ]
 
 export default function Bressani() {

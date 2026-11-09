@@ -5,9 +5,10 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import Navbar from './layout/Navbar/Navbar.jsx';
 import Footer from './layout/Footer.jsx';
 import Home from './pages/Home/Home.jsx';
-import Bressani from './pages/Bressani/Bressani.jsx';
+import Bressani from './pages/Books/Bressani/Bressani.jsx';
 import Books from './pages/Books/Books.jsx';
 import AboutMe from './pages/AboutMe/AboutMe.jsx';
+import Paulus from './pages/Books/Paulus/Paulus.jsx';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
             <Route path='/books'>
               <Route index element={<Books />}/>
               <Route path='/books/bressani' element={<Bressani/>}/>
+              <Route path='/books/paulus' element={<Paulus/>}/>
             </Route>
           </Route>
         </Routes>

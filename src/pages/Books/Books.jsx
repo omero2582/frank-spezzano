@@ -1,5 +1,5 @@
 import React from 'react'
-import Bressani from '../Bressani/Bressani'
+import Bressani from './Bressani/Bressani'
 import books from '../../db/books.json'
 import ReactMarkdown from 'react-markdown';
 import { Link } from 'react-router'
