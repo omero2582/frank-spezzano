@@ -102,7 +102,22 @@
     "summaryFile": "ivan.md",
     "price": 2000,
     "covers": ["/books/Ivan/ivan-cover.webp"],
-    "slug": "ivan-kocsis"
+    "slug": "ivan-kocsis",
+    "sections": [
+      {
+        "label": "Images",
+        "type": "images",
+        "images": [
+          {"src": "/books/Ivan/ivan-pick-1.png"},
+          {"src": "/books/Ivan/ivan-pick-2.png"},
+          {"src": "/books/Ivan/ivan-pick-3.png"},
+          {"src": "/books/Ivan/ivan-pick-4.png"},
+          {"src": "/books/Ivan/ivan-pick-5.png"},
+          {"src": "/books/Ivan/ivan-pick-6.png"},
+          {"src": "/books/Ivan/ivan-pick-10.png"}
+        ]
+      }
+    ]
   },
   {
     "title": "The Aviators",
